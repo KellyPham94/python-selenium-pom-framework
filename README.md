@@ -32,8 +32,8 @@ Before automating, test scenarios were mapped to cover functional validity, edge
 
 1. **Clone the repository:**
    ```bash
-   git clone <YOUR_REPOSITORY_URL>
-   cd <YOUR_PROJECT_FOLDER>
+   git clone https://github.com/KellyPham94/python-selenium-pom-framework.git
+   cd python-selenium-pom-framework
 2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
