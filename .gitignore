@@ -1,0 +1,17 @@
+#Virtual Enviroment
+.venv/
+venv/
+ENV/
+
+#Python bytecode & cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+#Test Reports
+report.html
+*.png
+
+#IDE Settings
+.idea/
+.vscode/
