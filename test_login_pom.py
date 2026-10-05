@@ -41,3 +41,14 @@ def test_login_sqli_payload(driver):
     assert "logged-in-successfully" not in driver.current_url.lower()
     print("\n The web is safe with basic SQL Injection")
 
+def test_login_with_leading_trailing_spaces(driver):
+    login_page = LoginPage(driver)
+    login_page.open_login_page()
+    login_page.enter_username("  student")
+    login_page.enter_password("Password123")
+    login_page.click_submit()
+    error_message = login_page.get_error_message()
+    assert error_message != "", "Error message should be displayed when username contains unstripped spaces"
+
+
+
