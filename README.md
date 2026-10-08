@@ -8,14 +8,15 @@ An automated testing project demonstrating a transition from **Manual Testing Mi
 
 Before automating, test scenarios were mapped to cover functional validity, edge cases, and basic security inputs (XSS validation).
 
-| Test Case ID | Scenario | Input Data                      | Expected Result |
-| :--- | :--- |:--------------------------------| :--- |
-| **TC_01** | Valid Login | `student` / `Password123`       | Redirected to success page (`/logged-in-successfully/`) |
-| **TC_02** | Invalid Username | `incorrectUser` / `Password123` | Error message displayed on UI |
-| **TC_03** | Invalid Password | `student` / `incorrectPassword` | Error message displayed on UI |
-| **TC_04** | Security Input (XSS) | `<script>alert('XSS')</script>` | Input handled safely without alert execution |
-| **TC_05** | Security Input (SQLi) | `' OR '1' = '1`                 | Login fails, no unauthorized access |
-| **TC_06** | Trim Spaces in Username | `  student ` / `Password123`    | Login fails with error message displayed on UI |
+| Test Case ID | Scenario                | Input Data                      | Expected Result |
+|:-------------|:------------------------|:--------------------------------| :--- |
+| **TC_01**    | Valid Login             | `student` / `Password123`       | Redirected to success page (`/logged-in-successfully/`) |
+| **TC_02**    | Invalid Username        | `incorrectUser` / `Password123` | Error message displayed on UI |
+| **TC_03**    | Invalid Password        | `student` / `incorrectPassword` | Error message displayed on UI |
+| **TC_04**    | Empty Fields Dataset    | ` ` / ` `                       | Error message displayed on UI |
+| **TC_05**    | Security Input (XSS)    | `<script>alert('XSS')</script>` | Input handled safely without alert execution |
+| **TC_06**    | Security Input (SQLi)   | `' OR '1' = '1`                 | Login fails, no unauthorized access |
+| **TC_07**    | Trim Spaces in Username | `  student ` / `Password123`    | Login fails with error message displayed on UI |
 
 ---
 

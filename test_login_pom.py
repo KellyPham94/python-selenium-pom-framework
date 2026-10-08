@@ -4,7 +4,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 
 
-@pytest.mark.parametrize("username,password,expected_status", [("student","Password123", "success"),("incorrectUser", "Password123", "fail"),("student", "incorrectPassword", "fail")])
+@pytest.mark.parametrize("username,password,expected_status", [("student","Password123", "success"),("incorrectUser", "Password123", "fail"),("student", "incorrectPassword", "fail"),("","","fail")])
 def test_login_multiple_accounts(driver, username, password, expected_status ):
     login_page = LoginPage(driver)
     login_page.open_login_page()
